@@ -1,0 +1,207 @@
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========== BODY (VIBRANT MULTICOLOR DARK) ========== */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+
+  background: linear-gradient(135deg, #0f2027, #2c5364, #1c1c2b);
+  background-size: 300% 300%;
+  animation: gradientMove 10s ease infinite;
+}
+
+/* Animated gradient */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ========== CONTAINER ========== */
+.app-container {
+  max-width: 520px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ========== TITLE (GRADIENT TEXT) ========== */
+.feed-section h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 26px;
+  font-weight: 700;
+
+  background: linear-gradient(45deg, #ff7a18, #ff0066, #00c6ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ========== POST CARD (GLASS + GLOW) ========== */
+.post-card {
+  margin-bottom: 25px;
+  border-radius: 16px;
+  overflow: hidden;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);        /* Standard (modern browsers) */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+
+  border: 1px solid rgba(255,255,255,0.1);
+
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+
+  transition: all 0.4s ease;
+  animation: fadeUp 0.6s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+}
+
+/* ========== IMAGE ========== */
+.post-image {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.post-card:hover .post-image {
+  transform: scale(1.08);
+}
+
+/* ========== CAPTION (GRADIENT TEXT) ========== */
+.post-caption {
+  padding: 14px;
+  font-size: 14px;
+  line-height: 1.5;
+
+  background: linear-gradient(45deg, #ffffff, #bbbbbb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ========== HEADER (OPTIONAL ADD) ========== */
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+}
+
+.post-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+
+  background: linear-gradient(45deg, #ff7a18, #ff0066);
+  margin-right: 10px;
+}
+
+.post-username {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* ========== ACTION BUTTONS ========== */
+.post-actions {
+  display: flex;
+  gap: 18px;
+  padding: 12px;
+}
+
+.post-actions span {
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.post-actions span:hover {
+  transform: scale(1.3);
+  color: #ff4d6d;
+}
+
+/* ========== CREATE POST (MATCHING UI) ========== */
+.create-post-section {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px;
+
+  border-radius: 16px;
+
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);        /* Standard (modern browsers) */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* INPUTS */
+.create-post-section input,
+.create-post-section textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+
+  border-radius: 8px;
+  outline: none;
+}
+
+.create-post-section input:focus,
+.create-post-section textarea:focus {
+  border-color: #00c6ff;
+}
+
+/* BUTTON */
+.create-post-section button {
+  width: 100%;
+  padding: 12px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: linear-gradient(45deg, #ff7a18, #ff0066, #00c6ff);
+  color: #fff;
+
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.create-post-section button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* ========== ANIMATION ========== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== SCROLLBAR ========== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#ff0066, #00c6ff);
+  border-radius: 10px;
+}
