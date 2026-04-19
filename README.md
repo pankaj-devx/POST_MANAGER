@@ -1,51 +1,17 @@
 # Post Manager Application
 
-A full-stack web application for managing and sharing posts with a Node.js backend and React frontend.
+A full-stack web application for managing and displaying posts with a Node.js backend and React frontend.
 
 ## Project Overview
 
-Post Manager is a social posting application that allows users to create, view, and manage posts. The application features a RESTful API backend built with Node.js and Express, and a modern React frontend built with Vite.
+Post Manager is a simple social posting application that allows users to create, view, and manage posts. The application features a RESTful API backend built with Node.js and Express, and a modern React frontend built with Vite.
 
 ## Prerequisites
 
 - **Node.js** (v14 or higher)
 - **npm** (v6 or higher)
 - **Git** (for version control)
-
-## Project Structure
-
-```
-post_manager/
-├── Backend/                 # Node.js/Express server
-│   ├── package.json
-│   ├── server.js           # Server entry point
-│   ├── src/
-│   │   ├── app.js          # Express app configuration
-│   │   ├── db/
-│   │   │   └── db.js       # Database connection
-│   │   ├── models/
-│   │   │   └── post.model.js  # Post data model
-│   │   └── services/
-│   │       └── storage.service.js  # Storage service
-│   └── node_modules/
-│
-└── frontend/                # React/Vite application
-    ├── package.json
-    ├── vite.config.js
-    ├── eslint.config.js
-    ├── index.html
-    ├── README.md
-    ├── src/
-    │   ├── main.jsx         # Entry point
-    │   ├── App.jsx          # Main app component
-    │   ├── index.css        # Global styles
-    │   ├── assets/          # Static assets
-    │   └── pages/
-    │       ├── createPost.jsx   # Create post page
-    │       └── feed.jsx         # Feed page
-    ├── public/              # Public assets
-    └── node_modules/
-```
+- **MongoDB** (for database storage)
 
 ## Installation
 
@@ -123,7 +89,6 @@ npm run dev
 
 - **Create Posts**: Users can create new posts with content
 - **View Feed**: Browse all posts in a feed layout
-- **Post Management**: Manage and organize posts
 - **Responsive Design**: Works on desktop and mobile devices
 
 ## API Endpoints
@@ -133,8 +98,7 @@ npm run dev
 - `GET /api/posts` - Retrieve all posts
 - `GET /api/posts/:id` - Retrieve a specific post
 - `POST /api/posts` - Create a new post
-- `PUT /api/posts/:id` - Update a post
-- `DELETE /api/posts/:id` - Delete a post
+
 
 ## Technologies Used
 
@@ -191,6 +155,5 @@ npm run build
 
 This project is licensed under the MIT License.
 
-## Support
-
-For issues or questions, please open an issue in the repository or contact the development team.
+## Contact
+For questions or support, please contact [thakur211222@gmail.com].
